@@ -1,4 +1,4 @@
-From python:3.12.1-alpine3.19
+FROM python:3.12.1-alpine3.19
 LABEL maintainer="Bertha Wright"
 
 ENV PYTHONUNBUFFERED 1
@@ -19,4 +19,4 @@ adduser \
 
 ENV PATH="/py/bin:$PATH"
 
-USER django-user
+USER django-user 
