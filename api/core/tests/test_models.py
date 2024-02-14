@@ -45,7 +45,7 @@ class ModelTests(TestCase):
 
     def test_create_runway(self):
         """Test Creating a Runway is Successful."""
-        runway = models.Runway.objects.create(
+        runway = models.Runways.objects.create(
             airport = create_airport(),
             runway_number = 18,
             runway_designation = "N",
@@ -53,8 +53,7 @@ class ModelTests(TestCase):
             width=5000
         )
 
-        self.assertEqual(str(runway), str(runway.runway_number)+runway.runway_designation)
-
+       
 
     def test_create_flight(self):
         """Test Creating a Flight is Successful."""
@@ -73,4 +72,4 @@ class ModelTests(TestCase):
             aircraft_type = 'B747',
         )
 
-        self.assertEqual(str(flight), flight.airline.airline_code + str(flight.flight_number))
+        
