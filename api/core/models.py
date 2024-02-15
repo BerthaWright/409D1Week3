@@ -33,7 +33,7 @@ class Runway(models.Model):
     airport = models.ForeignKey(Airport, related_name = "runways", on_delete = models.CASCADE)
 
     def __str__(self):
-        return f'{self.runway_number}{self.runway_designation}'
+        return "{}{}.format(runway_number, runway_designation)"
 
 class Flight(models.Model):
     origin = models.ForeignKey(Airport, on_delete = models.PROTECT, related_name ="flight_origin")
