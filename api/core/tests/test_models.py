@@ -54,6 +54,7 @@ class ModelTests(TestCase):
         )
         runway_result = "{}{}.format(runway_number, runway_designation)"
         
+        
         self.assertEqual(str(runway), runway_result)
 
     def test_create_flight(self):
