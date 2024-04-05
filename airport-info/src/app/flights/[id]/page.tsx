@@ -3,3 +3,4 @@ export default function FlightInfo({ params }: {params:  {id: string}  }){
         <div>Hello From Flight # {params.id}</div>
     ); 
 }
+
